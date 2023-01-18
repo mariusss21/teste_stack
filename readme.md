@@ -5,7 +5,7 @@
 O objetivo do teste é fazer ingestão, transformação e carga de dados de um dataset público que contém informações sobre a vacinação contra a COVID-19.
 https://opendatasus.saude.gov.br/dataset/covid-19-vacinacao
 
-## Tarefas:
+### Tarefas:
 
 * Escreva uma aplicação em Python que seja capaz de extrair dados da APi e realizar os seguintes requisitos necessários:
 * Extraia 10 colunas (as colunas que você julgar necessárias).
@@ -13,7 +13,7 @@ https://opendatasus.saude.gov.br/dataset/covid-19-vacinacao
 * Persistir o mesmo em uma base relacional (SQL). Sugestão: MySQL ou PostgreSQL em alguma Cloud (AWS, GCP ou Azure)
 * Persistir o mesmo no formato parquet com o devido particionamento que julgar necessário em seu file system local.
 
-## O que será avaliado:
+### O que será avaliado:
 
 * O padrão de codificação e o conhecimento de bibliotecas em Python; 
 * Conhecimento básico de modelagem de dados; 
@@ -62,10 +62,7 @@ Colunas selecionadas:
 * vacina_lote 
 * estabelecimento_razaoSocial 
 
-### Análise exploratória/tratamento de dados
-
-
 ## Próximos passos/melhorias
 
 * Criar script Python para deletar a estrutura montada na AWS
-* Utilizar o Airflow para orquestrar o ETL
+* Utilizar o Airflow para orquestrar
