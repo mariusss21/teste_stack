@@ -2,9 +2,6 @@ import requests
 from requests.auth import HTTPBasicAuth
 import pandas as pd
 
-# import pyarrow as pa
-# import pyarrow.parquet as pq
-
 def read_from_api(url, parameter, auth_id, auth_pass):
     """
     Request data from server and returns a JSON object
@@ -93,15 +90,6 @@ def data_transformation(df_api, filename):
     df_filtered['mes'] = df_filtered['vacina_dataAplicacao'].dt.month
 
     df_filtered.to_parquet('./vacinacao_parquet', partition_cols=['ano', 'mes'])
-
-    # table = pa.Table.from_pandas(df_filtered)
-
-    # pq.write_to_dataset(
-    #     table,
-    #     root_path='output.parquet',
-    #     partition_cols=['partone', 'parttwo'],
-    # )
-    # df_filtered.to_parquet(path= filename + '.parquet', index=False)
 
 
 if __name__ == '__main__':

@@ -26,26 +26,26 @@ if __name__ == "__main__":
     AWS_SECRET = config.get('AWS', 'AWS_SECRET')
     TABLE_NAME = config.get('DYNAMO', 'TABLE_NAME')
     
-    # # DynamoDB
-    # print('Instantiating DynamoDB resource...')
-    # dyn_resource = boto3.resource(service_name = 'dynamodb',region_name = AWS_REGION,
-    #           aws_access_key_id = AWS_ID,
-    #           aws_secret_access_key = AWS_SECRET)
+    # DynamoDB
+    print('Instantiating DynamoDB resource...')
+    dyn_resource = boto3.resource(service_name = 'dynamodb',region_name = AWS_REGION,
+              aws_access_key_id = AWS_ID,
+              aws_secret_access_key = AWS_SECRET)
 
-    # vac_dynamo = vacinacao_dynamodb(dyn_resource)
-    # dynamo_table_exists = vac_dynamo.exists(TABLE_NAME)
+    vac_dynamo = vacinacao_dynamodb(dyn_resource)
+    dynamo_table_exists = vac_dynamo.exists(TABLE_NAME)
 
-    # print(f'Check if {TABLE_NAME} exists: {dynamo_table_exists}')
+    print(f'Check if {TABLE_NAME} exists: {dynamo_table_exists}')
 
-    # if not dynamo_table_exists:
-    #     print(f"\nCreating table {TABLE_NAME}...")
-    #     vac_dynamo.create_table(TABLE_NAME)
-    #     print(f"\nCreated table {vac_dynamo.table.name}.")
+    if not dynamo_table_exists:
+        print(f"\nCreating table {TABLE_NAME}...")
+        vac_dynamo.create_table(TABLE_NAME)
+        print(f"\nCreated table {vac_dynamo.table.name}.")
 
-    # print(f'DynamoDB status: {vac_dynamo.table_status(TABLE_NAME)}')
+    print(f'DynamoDB status: {vac_dynamo.table_status(TABLE_NAME)}')
 
 
-    # # RDS
+    # RDS
     RDS_DB_NAME = config.get('RDS', 'RDS_DB_NAME')
     RDS_INSTANCE_ID = config.get('RDS', 'RDS_INSTANCE_ID')
     RDS_USER_NAME = config.get('RDS', 'RDS_USER_NAME')

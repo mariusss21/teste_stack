@@ -22,8 +22,8 @@ if __name__ == '__main__':
 
     vacinacao = vacinacao_dynamodb(dyn_resource)
 
-    print('Reading data from parquet file...')
-    df = pd.read_parquet('vacinacao.parquet')
+    print('Reading data from csv file...')
+    df = pd.read_csv('vacinacao.csv')
     df = df.head(1500)
 
     print('Verifying table status...')

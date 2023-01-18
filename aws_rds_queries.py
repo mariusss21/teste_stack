@@ -68,8 +68,8 @@ if __name__ == '__main__':
     print('Executing create table query...')
     vac_rds.execute_query(cur, create_table)
 
-    print('Reading data from parquet file...')
-    df = pd.read_parquet('vacinacao.parquet')
+    print('Reading data from csv file...')
+    df = pd.read_csv('vacinacao.csv')
     df = df.head(1500)
 
     print('Executing insert query...')
