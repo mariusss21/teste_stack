@@ -153,4 +153,5 @@ dmypy.json
 cython_debug/
 
 # config
-*.cfg
+config.cfg
+.gitignore
