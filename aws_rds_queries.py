@@ -48,7 +48,7 @@ if __name__ == '__main__':
         vacina_nome VARCHAR,
         vacina_lote VARCHAR,
         estabelecimento_razaoSocial VARCHAR,
-        PRIMARY KEY (paciente_id, vacina_dataAplicacao, vacina_lote))
+        PRIMARY KEY (paciente_id, vacina_dataAplicacao))
     """ 
 
     select_from = """ SELECT * FROM vacinacao """

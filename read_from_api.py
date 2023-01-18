@@ -76,7 +76,6 @@ def data_transformation(df_api, filename):
 
     df_from_manual = df[columns_list_from_manual]
 
-    print('Transforming data...')
     print('Filtering columns...')
     df_filtered = df_from_manual[[
         '_source_paciente_id',
@@ -97,12 +96,11 @@ def data_transformation(df_api, filename):
     print('Renaming columns...')
     df_filtered.columns = df_filtered.columns.str.replace('_source_', '')
 
-    print('Filling null values')
+    print('Filling missing values')
     df_filtered['paciente_endereco_uf'].fillna('BR', inplace=True)
     df_filtered['vacina_descricao_dose'].fillna('-', inplace=True)
 
-    df_filtered.loc[:, 'vacina_dataAplicacao'] = pd.to_datetime(df_filtered['vacina_dataAplicacao']).dt.date
-    df_filtered.loc[:,'vacina_dataAplicacao'] = df_filtered['vacina_dataAplicacao'].astype(str)
+    df_filtered.loc[df_filtered.duplicated(subset=['paciente_id']), 'vacina_dataAplicacao'] = df_filtered.loc[df_filtered.duplicated(subset=['paciente_id']), 'vacina_dataAplicacao'].str.replace('000Z', '001Z')
 
     print('Saving data in CSV file')
     df_filtered.to_csv(path_or_buf= filename + '.csv', index=False)
