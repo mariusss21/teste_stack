@@ -35,7 +35,7 @@ A solução foi desenvolvida em Python e fez uso da AWS como provedor Cloud
 
 ### Dicionário de dados
 
-** Colocar imagem
+![](2023-01-18-15-32-18.png)
 
 Colunas selecionadas:
 
