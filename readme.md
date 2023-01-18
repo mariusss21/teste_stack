@@ -35,12 +35,14 @@ A solução foi desenvolvida em Python e fez uso da AWS como provedor Cloud
 
 ### Dicionário de dados
 
-![](2023-01-18-15-32-18.png)
+![](/images/dicionario_dados.png)
+
+Com a limitação de 10 colunas para os dados, foram selecionadas aquelas que podem fornecer informações relevantes quanto à vacinação. Destaco entre elas a idade (a vacinação é agrupada pela idade), dados de grupos de paciente (sexo, raça/cor, estado) e informações sobre a vacina (data de aplicação, lote, nome e descrição da dose) e o estabelecimento onde ela foi aplicada (razão social).
 
 Colunas selecionadas:
 
-* paciente_id: 
-* paciente_enumSexoBiologico: 
+* paciente_id: Id do paciente
+* paciente_enumSexoBiologico:
 * paciente_idade: 
 * paciente_racaCor_valor: 
 * paciente_endereco_uf: 
