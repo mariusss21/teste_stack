@@ -6,7 +6,7 @@ import psycopg2.extras as extras
 
 from botocore.exceptions import ClientError
 
-logging.basicConfig(filename='app.log', filemode='w')
+logging.basicConfig(filename='app.log', filemode='a')
 
 
 class vacinacao_rds:

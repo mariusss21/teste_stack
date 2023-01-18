@@ -3,7 +3,7 @@ import logging
 from decimal import Decimal
 from botocore.exceptions import ClientError
 
-logging.basicConfig(filename='app.log', filemode='w')
+logging.basicConfig(filename='app.log', filemode='a')
 
 
 class vacinacao_dynamodb:
