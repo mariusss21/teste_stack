@@ -5,7 +5,7 @@
 O objetivo do teste é fazer ingestão, transformação e carga de dados de um dataset público que contém informações sobre a vacinação contra a COVID-19.
 https://opendatasus.saude.gov.br/dataset/covid-19-vacinacao
 
-Tarefas:
+## Tarefas:
 
 * Escreva uma aplicação em Python que seja capaz de extrair dados da APi e realizar os seguintes requisitos necessários:
 * Extraia 10 colunas (as colunas que você julgar necessárias).
@@ -47,7 +47,7 @@ A solução foi desenvolvida em Python e SQL, fazendo uso da AWS como provedor C
 
 ![](/images/dicionario_dados.png)
 
-Com a limitação de 10 colunas para os dados, foram selecionadas colunas que pudessem fornecer informações valiosas sobre o paciente, a vacina e o estabelecimento. Destaco entre elas a idade (a vacinação é agrupada pela idade), dados de grupos de paciente (sexo, raça/cor, estado) e informações sobre a vacina (data de aplicação, lote, nome e descrição da dose) e o estabelecimento onde ela foi aplicada (razão social).
+Com a limitação de 10 colunas para os dados, foram selecionadas as colunas que pudessem minimamente prover informações  sobre o paciente, a vacina e o estabelecimento. Destaco entre elas a idade (a vacinação é agrupada pela idade), dados de grupos de paciente (sexo, raça/cor, estado) e informações sobre a vacina (data de aplicação, lote, nome e descrição da dose) e o estabelecimento onde ela foi aplicada (razão social).
 
 Colunas selecionadas:
 
